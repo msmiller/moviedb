@@ -1,2 +1,5 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% if @current_user.nil? -%>
+  <img class="mx-auto rounded-xl border border-gray-800" src="/assets/images/theatre.jpg">
+  <div class="mx-auto text-center">Join or Login to continue ...</div>
+<% else %>
+<% end %>

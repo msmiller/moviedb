@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'importmap-rails'     # https://github.com/rails/importmap-rails
 gem 'turbo-rails'         # https://github.com/hotwired/turbo-rails
 gem 'stimulus-rails'      # https://github.com/hotwired/stimulus-rails
+gem 'cssbundling-rails'   # https://github.com/rails/cssbundling-rails
 
 gem "heroicon"
 gem "view_component", require: "view_component/engine"
