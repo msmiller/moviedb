@@ -13,6 +13,8 @@
 
   <body class="text-white">
     <%= render(TopbarComponent.new(current_user: @current_user)) %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <div id="yield"><%= yield %></div>
   </body>
 </html>

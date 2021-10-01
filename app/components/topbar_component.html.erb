@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <nav class="sticky top-0 z-40 border-b border-gray-800" id="topbar">
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-7xl mx-auto px-6">
     <div class="">
       <div class="flex items-center justify-between h-16 px-4 sm:px-0">
         <div class="flex items-center">
@@ -24,14 +24,19 @@
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6 space-x-5">
             <button type="button" class="p-1 text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-              <span class="sr-only">View notifications</span>
+              <span class="sr-only">Search</span>
               <%= heroicon 'search', variant: 'outline', options: { class: 'h-6 w-6 inline-block' } %>
             </button>
 
-              <a href="#" class="text-gray-400 border border-indigo-500 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl text-sm font-medium">Join</a>
+            <% if @current_user -%>
+              <%= button_to "Sign out", destroy_user_session_path, :method => 'delete',
+                class: 'cursor-pointer text-gray-400 bg-gray-900 border border-indigo-500 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl text-sm font-medium' %>
 
-              <a href="#" class="text-gray-400 border border-gray-700 bg-gray-700 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl text-sm font-medium">Login</a>
+            <% else -%>
+              <a href="/users/sign_up" class="text-gray-400 border border-indigo-500 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl text-sm font-medium">Join</a>
 
+              <a href="/users/sign_in" class="text-gray-400 border border-gray-700 bg-gray-700 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl text-sm font-medium">Login</a>
+              <% end %>
 
             </div>
           </div>

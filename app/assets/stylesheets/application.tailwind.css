@@ -8,6 +8,10 @@ body { background: #131419;  }
 #topbar { background: #1C1C24; }
 #yield { @apply mx-auto max-w-6xl mt-8; }
 
+.deviseform label { @apply font-light text-indigo-300; }
+.deviseform .field input { @apply text-center bg-gray-800 rounded-lg outline-none focus:bg-black focus:ring-0 focus:ring-offset-2 focus:ring-offset-indigo-800 focus:ring-indigo-500; }
+.deviselinks a { @apply text-gray-400 border border-indigo-500 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl; }
+.devisesubmit { @apply bg-transparent border border-indigo-500 hover:bg-gray-700 hover:text-white px-5 py-2 rounded-xl; }
 /* h1 { @apply text-2xl uppercase my-4 text-red-500; } */
 /* .clamped { @apply line-clamp-2;  } */
 /* .applytest { @apply w-48  mt-2 px-3 py-2 border border-blue-500 bg-blue-200 text-blue-800 rounded-lg shadow-lg; } */
