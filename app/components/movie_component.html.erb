@@ -1,0 +1,10 @@
+<li><div class="col-span-1 flex flex-col text-center bg-gray-800 text-white rounded-lg shadow divide-y divide-gray-200 hover:ring-4 hover:ring-indigo-500 cursor-pointer">
+  <div class="flex-1 flex flex-col p-8 relative">
+    <%== dots_thingy %>
+    <%== rating_thingy %>
+    <img class="w-full xxxflex-shrink-0 mx-auto object-cover rounded-lg h-52 md:h-80"
+         src="https://image.tmdb.org/t/p/w500/<%= @movie.poster_path %>">
+    <h3 class="mt-6 text-sm font-medium line-clamp-1 text-left"><%= @movie.original_title %></h3>
+    <p class="text-sm text-gray-500 font-medium text-left"><%= formatted_date %></p>
+  </div>
+</div></li>

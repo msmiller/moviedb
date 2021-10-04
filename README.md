@@ -14,4 +14,5 @@ Built using the following ...
 3. bundle
 4. yarn
 5. rails db:migrate
-6. foreman start
+6. Set `TMDB_KEY` in `.env`
+7. foreman start

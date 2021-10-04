@@ -2,5 +2,8 @@
   <img class="mx-auto rounded-xl border border-gray-800" src="/assets/images/theatre.jpg">
   <div class="mx-auto text-center">Join or Login to continue ...</div>
 <% else %>
-<%= @current_user.age %>
+<h2 class="text-2xl mb-8 mx-4 ">Popular Movies</h2>
+<ul role="list" class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-2 mx-4 mb-8">
+  <%= render(MovieComponent.with_collection(@movies)) %>
+</ul>
 <% end %>
