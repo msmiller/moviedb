@@ -3,7 +3,5 @@
   <div class="mx-auto text-center">Join or Login to continue ...</div>
 <% else %>
 <h2 class="text-2xl mb-8 mx-4 ">Popular Movies</h2>
-<ul role="list" class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-2 mx-4 mb-8">
-  <%= render(MovieComponent.with_collection(@movies)) %>
-</ul>
+<%== turbo_frame_load('movies_frame', '/home/movies') %>
 <% end %>

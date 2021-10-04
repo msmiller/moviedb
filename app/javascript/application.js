@@ -3,6 +3,6 @@ import "controllers"
 import "@hotwired/turbo-rails"
 
 import $ from "jquery"
-import "images/spaceship.svg"
-import "images/theatre.jpg"
+// import "./images/spaceship.svg"
+// import "./images/theatre.jpg"
 
