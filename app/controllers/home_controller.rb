@@ -1,11 +1,13 @@
 class HomeController < ApplicationController
   def index
-    @response = ThemoviedbApi.list_movies(@current_user.age || 99)
-    @movies = @response['results']
+    @age = (params['age'] || @current_user.age || 99).to_i
+    # @response = ThemoviedbApi.list_movies(params['age'] || @current_user.age || 99)
+    # @movies = @response['results']
   end
 
   def movies
-    @response = ThemoviedbApi.list_movies(@current_user.age || 99)
+    @age = (params['age'] || @current_user.age || 99).to_i
+    @response = ThemoviedbApi.list_movies(@age)
     @movies = @response['results']
     render layout: false
   end

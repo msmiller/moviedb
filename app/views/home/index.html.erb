@@ -3,5 +3,5 @@
   <div class="mx-auto text-center">Join or Login to continue ...</div>
 <% else %>
 <h2 class="text-2xl mb-8 mx-4 ">Popular Movies</h2>
-<%== turbo_frame_load('movies_frame', '/home/movies') %>
+<%== turbo_frame_load('movies_frame', "/home/movies?age=#{@age}") %>
 <% end %>
